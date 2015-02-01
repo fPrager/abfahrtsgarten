@@ -56,18 +56,15 @@ CONTENTS OF THIS FILE
 
    Raspberry Pi
 
-	WIFI-Adapter
-
-	Micro-USB-Powersupply
-
-	USB-Cable to the Arduino
+    WIFI-Adapter
+    Micro-USB-Powersupply
+    USB-Cable to the Arduino
 
    
    Arduino
 
-	8x8-LED-Matrix
-
-	Servo-Motor with separeted power-source
+    8x8-LED-Matrix
+    Servo-Motor with separeted power-source
 	
  * Installation
 
@@ -90,7 +87,7 @@ CONTENTS OF THIS FILE
 
    dvb.py
 
-	'''_antedBusLines		: its an array of buslines that are of interest, 
+    _wantedBusLines		: its an array of buslines that are of interest, 
 
 					e.g. the bus number 85 which has the directions "Striesen" and "Btf. Gruna"
 
@@ -102,15 +99,15 @@ CONTENTS OF THIS FILE
 
 							              	];
 
-					so you will get the shortest arrival, which can be one of both busses '''
+					so you will get the shortest arrival, which can be one of both busses
 
-	'''_wantedBusStop		: for which station you ask for the busses '''
+    _wantedBusStop		: for which station you ask for the busses
 
 					e.g. in Dresden "Rathausplauen"
 
-	'''_lessMinutes		: maybe you want to set some time-buffer ("I need 3 min to my station, so show me 3 min less.")'''
+    _lessMinutes		: maybe you want to set some time-buffer ("I need 3 min to my station, so show me 3 min less.")
 
-	'''_alternativeBusStop	: it is possible that your station (_wantedBusStop) is very important and that's why a lot of busses or trams arrive or depart there
+    _alternativeBusStop	: it is possible that your station (_wantedBusStop) is very important and that's why a lot of busses or trams arrive or depart there
 				  the dvb-webservice just offers the next 8 or 10 arrivals so it is often not possible to get the busses of interest because they needs
 				  "to long" to arrive, so you would see the times in a realy short period.
 
@@ -124,35 +121,35 @@ CONTENTS OF THIS FILE
 						the monitor would be 8 or 5 minutes, which is realy short to 
 
 					     one station after "rathausplauen" comes "kaitzerstraﬂe" wich is just "used" by the 85, for that station it is much easier to get the 
-					     next bus because no other traffic "dumps" the dvb-response'''
+					     next bus because no other traffic "dumps" the dvb-response
 
-	'''_minToAltStation	: how long needs the bus from the wanted station to the alternative station'''
+    _minToAltStation	: how long needs the bus from the wanted station to the alternative station
 	
    main.py
 
-	'''SECONDS_TO_REQUEST	: pause between to requests of the arrival-time'''
+    SECONDS_TO_REQUEST	: pause between to requests of the arrival-time
 
-	'''POWER_BUTTON_PIN	: Pin-number of an GPIO - Button to get some input-signals'''
+    POWER_BUTTON_PIN	: Pin-number of an GPIO - Button to get some input-signals
 
    actor.py
 
-	'''nr-ids of the command-manager'''
+    nr-ids of the command-manager
 
-	'''BAUD_RATE		: the baud-rate of the serial-connection, must be the same of the Arduino script'''	
+    BAUD_RATE		: the baud-rate of the serial-connection, must be the same of the Arduino script	
 
 
 "Actor"
 
    actor.ino
 
-	'''BAUD_RATE 		: the baud-rate of the serial-connection, must be the same of the Raspberry Pi script'''
+    BAUD_RATE 		: the baud-rate of the serial-connection, must be the same of the Raspberry Pi script
 	
-	'''BUS_PIN			: analog Signal-Pin of the Servo'''
-	'''BUS_DRIVE_DELAY 	: how long is the interruption from one servo position to the next, means it's the bus-drive-speed'''
-	'''BUS_TOGGLE_PIN		: connection to the transistor to control the power-consumption of the servo'''
-	'''BUS_0_POS		: what value of the analog signal is the "lowest" position of the bus/servo'''
-	'''BUS_100_POS		: what value is the "highest" position of the bus/servo'''
+    BUS_PIN			: analog Signal-Pin of the Servo'''
+    BUS_DRIVE_DELAY 	: how long is the interruption from one servo position to the next, means it's the bus-drive-speed
+    BUS_TOGGLE_PIN		: connection to the transistor to control the power-consumption of the servo
+    BUS_0_POS		: what value of the analog signal is the "lowest" position of the bus/servo
+    BUS_100_POS		: what value is the "highest" position of the bus/servo
 
-	'''DISPLAY_BRIGHTNESS	: see Adafruit_LEDBackpack-library which values are possible'''
-	'''DISPLAY_CLEAR_SPEED	: how fast the line will come from above to clear the display, in ms'''
-	'''DISPLAY_TEXT_SPEED	: Time how long the text stays in one position, in ms, means its the setting of the text-scroll-speed on the 8x8-Matrix'''
+    DISPLAY_BRIGHTNESS	: see Adafruit_LEDBackpack-library which values are possible
+    DISPLAY_CLEAR_SPEED	: how fast the line will come from above to clear the display, in ms
+    DISPLAY_TEXT_SPEED	: Time how long the text stays in one position, in ms, means its the setting of the text-scroll-speed on the 8x8-Matrix
