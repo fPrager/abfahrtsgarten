@@ -1,4 +1,4 @@
-Abfahrtsgarten
+<h1>Abfahrtsgarten</h1>
 
 Descr:
 This project depends on an interactive installation of an arrival monitor at home. It is configured for local passenger transport of Dresden (only) because it just uses
@@ -13,21 +13,21 @@ Feel free to adapt the idea on your purpose.
 CONTENTS OF THIS FILE
 ---------------------
    
- * Introduction
+ <h2>* Introduction</h2>
 
   The installation uses an Raspberry PI for the higher logic (the Thinker) and an Arduino to play the Actor. So the whole project is devided in two main scripts (for each platform).
   Both boards communicate via Serial.
 
 
- * Requirements
+  <h2>* Requirements</h2>
 
-  "Raspberry Pi"
+<h3>Raspberry Pi</h3>
 
 	There are several nesessary configurations of the Raspberry Pi to work like an adapter to the Internet (Rasbian XY as Bootsystem, WIFI connectivity, Python 3, ...). 
 	So yes, one of the most important requirement is an internet connection.  
   
 
-  "Arduino"
+<h3>Arduino</h3>
 
 	This requirements depands on the kind of output you want to use to show the bus-arrival-time. The script of this setup "presumes" an output on a 8x8 matrix and a servo-motor.
 	The Arduino needs the following libraries:
@@ -43,7 +43,7 @@ CONTENTS OF THIS FILE
 		Servo	
 		
 			
-  "additional info:"
+<h3>additional info:</h3>
 
 	The Arduino is connected to one USB-Port of the Raspberry Pi.
 	The Servo-Motor needs an EXTRA, SEPERATED power-source. Otherwise it pulls to much power of the arduino -> raspberry pi and both boards freeze.
@@ -52,21 +52,21 @@ CONTENTS OF THIS FILE
 	You may need some buttons to make some inputs too. 
 
 
- * Recommended modules
+ <h2>* Recommended modules</h2>
 
-   Raspberry Pi
+<h3>Raspberry Pi</h3>
 
     WIFI-Adapter
     Micro-USB-Powersupply
     USB-Cable to the Arduino
 
    
-   Arduino
+<h3>Arduino</h3>
 
     8x8-LED-Matrix
     Servo-Motor with separeted power-source
 	
- * Installation
+ <h2>* Installation</h2>
 
    1. Befor you connect the Arduino with the Raspberry Pi, load the "actor"-script on it via a PC-Connection. 
    2. After this you can hook the output-modules on the this board. Pay attention on the PIN-Definition in the uses Script!
@@ -80,9 +80,9 @@ CONTENTS OF THIS FILE
    
    9. "optional" If you wanna make it more eco-friendly, you can add a power-switch on the power-source of the raspberry pi two shut down the arrival monitor and save power.
 
- * Configuration
+ <h2>* Configuration</h2>
 
-"Thinker"
+<h3>Thinker</h3>
 
 
    dvb.py
@@ -138,7 +138,7 @@ CONTENTS OF THIS FILE
     BAUD_RATE		: the baud-rate of the serial-connection, must be the same of the Arduino script	
 
 
-"Actor"
+<h3>Actor</h3>
 
    actor.ino
 
