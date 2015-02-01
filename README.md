@@ -13,7 +13,7 @@ Feel free to adapt the idea on your purpose.
 CONTENTS OF THIS FILE
 ---------------------
    
- * Introduction
+ * Introduction//
   The installation uses an Raspberry PI for the higher logic (the Thinker) and an Arduino to play the Actor. So the whole project is devided in two main scripts (for each platform).
   Both boards communicate via Serial.
 
